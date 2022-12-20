@@ -16,6 +16,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .brand_header>img{
@@ -72,9 +73,12 @@ header button:hover{
     background: #FDC134;
 }
 
-.menu_mobile_icon{
+.menu_mobile{
     display: none;
 }
+
+
+
 
 @media screen and (max-width: 999px){
 
@@ -91,10 +95,53 @@ header button:hover{
         display: none;
     }
 
-    .menu_mobile_icon{
-        display: initial;
-        width: 40px;
+    .menu_mobile{
+        display: block;
     }
+
+    .menu_mobile ul{
+        opacity: 0;
+        transition: .1s ease-in;
+        display: block;
+        background: #FFF;
+        position: absolute;
+        right: 0;
+        width: 50vh;
+        height: 50vh;
+        z-index: 5;
+        top: 20vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+    .show_menu{
+        opacity: 1 !important;
+    }
+
+    .menu_mobile ul li{
+        list-style: none;
+    }
+
+    .menu_mobile ul li a{
+        text-decoration: none;
+        color: #7746FF;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+
+
+    .menu_mobile_icon{
+        width: 40px;
+        cursor: pointer;
+    }
+
+
+
     
 }
 
@@ -300,6 +347,8 @@ header button:hover{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+
 }
 
 .container_section_3 figure{
@@ -310,6 +359,7 @@ header button:hover{
     transform: rotate(-15deg);
     position: relative;
     z-index: 10;
+
 }
 
 .container_section_3 figure::after{
@@ -327,7 +377,7 @@ header button:hover{
 
 
 .sub_content_section_3{
-    width: 600px;
+    width: 500px;
     height: 400px;
 
     display: flex;
@@ -361,14 +411,18 @@ header button:hover{
     transition: .2s ease;
 }
 
-@media screen and (max-width: 999px){
+@media screen and (max-width: 1099px){
 
     .sub_content_section_3{
         width: 80vw;
+    }
 
+    .container_section_3 figure{
+       display: none;
     }
     
 }
+
 
 @media screen and (max-width: 650px){
 
@@ -444,6 +498,21 @@ header button:hover{
     transition: .2s ease;
 }
 
+@media screen and (max-width: 999px){
+
+    
+    .sub_content_section_4{
+        width: 80vw;
+    }
+
+    .container_section_4 figure{
+       display: none;
+    }
+    
+}
+
+
+
 /* END STYLED SECTION 4*/
 
 /* SECTION 5*/
@@ -500,6 +569,19 @@ header button:hover{
     position: relative;
 }
 
+@media screen and (max-width: 999px){
+
+    .sub_content_section_5{
+        width: 80vw;
+    }
+
+    .container_section_5 figure{
+       display: none;
+    }
+    
+}
+
+
 /* END STYLED SECTION 5*/
 
 /* SECTION 6*/
@@ -516,6 +598,9 @@ header button:hover{
 }
 
 .sub_content_section_6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -551,6 +636,40 @@ header button:hover{
     color: #FFF;
     font-size: 2rem;
     margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 999px){
+
+    .sub_content_section_6 p{
+        width: 50vw;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 699px){
+
+    .sub_content_section_6 p{
+        width: 80vw;
+
+    }
+
+    .container_section_6 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem 0 2rem 0;
+    }
+
+
+    .container_social_medias{
+        width: 80vw;
+        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 /* END STYLED SECTION 6*/
@@ -621,9 +740,13 @@ footer{
     border: #03206D 2px solid;
 }
 
+.container_boxs_navs{
+    display: flex;
+    flex-direction: row;
+}
 
 .box_navs{
-    width: 10vw;
+    width: 160px;
     height: 30vh;
 }
 
@@ -653,9 +776,50 @@ footer{
     transition: .2s ease-in;
 }
 
-
 .box_navs a:hover{
     color: #4E97FF;
 }
 
+@media screen and (max-width: 999px){
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_contact_footer {
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .container_contact_footer input{
+        width: 70vw;
+        margin-bottom: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 699px){
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+
+        height: 100%;
+    }
+
+    .container_boxs_navs{
+        width: 80vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .box_navs{
+        width: 200px;
+        height: 22vh;
+    }
+}
 
